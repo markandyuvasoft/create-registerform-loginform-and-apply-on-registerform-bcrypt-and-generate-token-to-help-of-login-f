@@ -1,13 +1,13 @@
 import express from 'express'
 import Student from '../model/student.js'
 import mongoose from 'mongoose'
-import checkAuth from '../middleware/check-auth.js'
+
 
 const studentrouter=express.Router()
 
 
 //GET STUDENT 
-studentrouter.get("/",checkAuth,(req,res)=>{
+studentrouter.get("/",(req,res)=>{
 Student.find()
 .then(result=>{
 
